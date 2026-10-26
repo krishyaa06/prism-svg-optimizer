@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prism SVG Optimizer · Prism Protocol</title>
+  <meta name="description" content="In-browser SVG optimizer with live before/after preview and export to data URI, CSS background or React component." />
+  <meta name="theme-color" content="#07080f" />
+  <meta property="og:title" content="Prism SVG Optimizer · Prism Protocol" />
+  <meta property="og:description" content="In-browser SVG optimizer with live before/after preview and export to data URI, CSS background or React component." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/prism.css" />
+  <link rel="stylesheet" href="css/app.css" />
+  <style>:root{--accent:#3EE69A;--accent-2:#00D2FF}</style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./"><span class="mark">◇</span><b>PRISM</b><span>SVG Optimizer</span></a>
+    <nav>
+      <a class="btn small" href="https://github.com/krishyaa06/prism-svg-optimizer" target="_blank" rel="noreferrer">★ GitHub</a>
+    </nav>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">🪶 Design Tools</p>
+      <h1>Lighter SVGs, <em>same pixels.</em></h1>
+      <p class="lead">Strip editor junk, round coordinates and compact paths with a before/after preview. Export as SVG, data URI, CSS or a React component.</p>
+    </section>
+    <section class="grid g2 svgio">
+      <div class="card">
+        <div class="card-title"><h2>Original</h2><div class="row"><span class="pill" id="b1"></span><label class="btn small" for="file">Open .svg</label><input type="file" id="file" accept=".svg,image/svg+xml" hidden /><button class="btn small" id="sample">Sample</button></div></div>
+        <div class="prev checker" id="p1"></div>
+        <textarea id="in" class="code" spellcheck="false" aria-label="SVG input" placeholder="Paste SVG markup or drop a file"></textarea>
+      </div>
+      <div class="card">
+        <div class="card-title"><h2>Optimized</h2><div class="row"><span class="pill ok" id="b2"></span><span class="pill acc" id="pct"></span></div></div>
+        <div class="prev checker" id="p2"></div>
+        <div class="tabs out-tabs" id="out"><button class="on" data-v="svg">SVG</button><button data-v="uri">Data URI</button><button data-v="css">CSS</button><button data-v="jsx">React</button></div>
+        <pre class="out res" id="res"></pre>
+        <div class="row"><button class="btn small primary" id="copy">Copy</button><button class="btn small" id="dl">Download .svg</button></div>
+      </div>
+    </section>
+    <section class="card opts">
+      <div class="row">
+        <label class="field inline">Precision <select id="precision"><option>0</option><option>1</option><option selected>2</option><option>3</option></select></label>
+        <label class="check"><input type="checkbox" data-o="removeComments" checked /> Comments</label>
+        <label class="check"><input type="checkbox" data-o="removeMetadata" checked /> Metadata</label>
+        <label class="check"><input type="checkbox" data-o="removeEditorData" checked /> Editor junk</label>
+        <label class="check"><input type="checkbox" data-o="removeDefaults" checked /> Default attrs</label>
+        <label class="check"><input type="checkbox" data-o="collapseGroups" checked /> Empty groups</label>
+        <label class="check"><input type="checkbox" data-o="removeDimensions" /> Responsive (drop width/height)</label>
+        <label class="check"><input type="checkbox" data-o="removeTitle" /> Title</label>
+      </div>
+    </section>
+
+  </main>
+  <footer class="foot">
+    <span>◇ Prism SVG Optimizer · Part of <a href="https://dc.gg/prismprotocol" target="_blank" rel="noreferrer">Prism Protocol</a></span>
+    <span><a href="https://github.com/krishyaa06/prism-svg-optimizer" target="_blank" rel="noreferrer">Source</a> · MIT License · Runs 100% in your browser</span>
+  </footer>
+  <script src="js/prism.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

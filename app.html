@@ -1,0 +1,26 @@
+    <section class="grid g2 svgio">
+      <div class="card">
+        <div class="card-title"><h2>Original</h2><div class="row"><span class="pill" id="b1"></span><label class="btn small" for="file">Open .svg</label><input type="file" id="file" accept=".svg,image/svg+xml" hidden /><button class="btn small" id="sample">Sample</button></div></div>
+        <div class="prev checker" id="p1"></div>
+        <textarea id="in" class="code" spellcheck="false" aria-label="SVG input" placeholder="Paste SVG markup or drop a file"></textarea>
+      </div>
+      <div class="card">
+        <div class="card-title"><h2>Optimized</h2><div class="row"><span class="pill ok" id="b2"></span><span class="pill acc" id="pct"></span></div></div>
+        <div class="prev checker" id="p2"></div>
+        <div class="tabs out-tabs" id="out"><button class="on" data-v="svg">SVG</button><button data-v="uri">Data URI</button><button data-v="css">CSS</button><button data-v="jsx">React</button></div>
+        <pre class="out res" id="res"></pre>
+        <div class="row"><button class="btn small primary" id="copy">Copy</button><button class="btn small" id="dl">Download .svg</button></div>
+      </div>
+    </section>
+    <section class="card opts">
+      <div class="row">
+        <label class="field inline">Precision <select id="precision"><option>0</option><option>1</option><option selected>2</option><option>3</option></select></label>
+        <label class="check"><input type="checkbox" data-o="removeComments" checked /> Comments</label>
+        <label class="check"><input type="checkbox" data-o="removeMetadata" checked /> Metadata</label>
+        <label class="check"><input type="checkbox" data-o="removeEditorData" checked /> Editor junk</label>
+        <label class="check"><input type="checkbox" data-o="removeDefaults" checked /> Default attrs</label>
+        <label class="check"><input type="checkbox" data-o="collapseGroups" checked /> Empty groups</label>
+        <label class="check"><input type="checkbox" data-o="removeDimensions" /> Responsive (drop width/height)</label>
+        <label class="check"><input type="checkbox" data-o="removeTitle" /> Title</label>
+      </div>
+    </section>

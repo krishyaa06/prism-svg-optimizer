@@ -1,0 +1,7 @@
+.svgio{align-items:start}
+.prev{height:200px;border-radius:12px;display:grid;place-items:center;margin-bottom:12px;overflow:hidden;border:1px solid var(--line)}
+.prev svg{max-width:80%;max-height:170px;width:auto;height:auto}
+.checker{background:conic-gradient(#ffffff08 25%,transparent 0 50%,#ffffff08 0 75%,transparent 0) 0 0/20px 20px,#0a0d19}
+#in{min-height:240px;font-size:12px}.res{min-height:200px;max-height:240px;font-size:12px;margin:10px 0}
+.opts{margin-top:16px}.field.inline{flex-direction:row;align-items:center;gap:8px}.field.inline select{width:auto;padding:6px 10px}
+.opts .row{gap:16px}

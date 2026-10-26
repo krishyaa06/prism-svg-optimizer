@@ -1,0 +1,30 @@
+{
+  "name": "prism-svg-optimizer",
+  "version": "1.0.0",
+  "description": "In-browser SVG optimizer with live before/after preview and export to data URI, CSS background or React component.",
+  "scripts": {
+    "test": "node --test",
+    "start": "npx --yes serve ."
+  },
+  "keywords": [
+    "svg",
+    "svg-optimizer",
+    "svgo",
+    "icons",
+    "react",
+    "web-performance",
+    "design-tools",
+    "vanilla-js",
+    "prism-protocol"
+  ],
+  "author": "Soumya Bhandare (krishyaa06)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krishyaa06/prism-svg-optimizer.git"
+  },
+  "homepage": "https://krishyaa06.github.io/prism-svg-optimizer/",
+  "engines": {
+    "node": ">=18.17"
+  }
+}
